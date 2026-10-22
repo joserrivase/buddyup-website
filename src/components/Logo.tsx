@@ -1,3 +1,7 @@
+import { publicUrl } from "../data";
+
+const logoMask = `url(${publicUrl("/logo-outline-cropped.png")})`;
+
 export function Logo({
   className = "",
   color = "white",
@@ -10,8 +14,8 @@ export function Logo({
       className={`inline-block ${className}`}
       style={{
         backgroundColor: color === "white" ? "#fff" : "#292966",
-        WebkitMaskImage: "url(/logo-outline-cropped.png)",
-        maskImage: "url(/logo-outline-cropped.png)",
+        WebkitMaskImage: logoMask,
+        maskImage: logoMask,
         WebkitMaskSize: "contain",
         maskSize: "contain",
         WebkitMaskRepeat: "no-repeat",

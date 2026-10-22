@@ -1,3 +1,7 @@
+export function publicUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+}
+
 export const APP_STORE_URL =
   "https://apps.apple.com/us/app/buddyup-accountability-app/id6756550977";
 
@@ -26,17 +30,17 @@ export const proofBars = [
 
 export const screenshots = [
   {
-    src: "/screenshots/home_screen.png",
+    src: publicUrl("/screenshots/home_screen.png"),
     alt: "BuddyUp home screen showing active goals with a buddy",
     label: "Your goals",
   },
   {
-    src: "/screenshots/edit_goal.png",
+    src: publicUrl("/screenshots/edit_goal.png"),
     alt: "Edit a goal, including visibility, streak, and buddy",
     label: "Edit a goal",
   },
   {
-    src: "/screenshots/daily_goal.png",
+    src: publicUrl("/screenshots/daily_goal.png"),
     alt: "Daily goal details with streaks, days completed, and a shared calendar",
     label: "Daily goal",
   },
@@ -91,19 +95,19 @@ export const goalTypes = [
   {
     title: "Daily Goal",
     body: "Check off the days you show up. Streaks, a shared calendar, and a running count of days completed.",
-    src: "/screenshots/daily_goal.png",
+    src: publicUrl("/screenshots/daily_goal.png"),
     alt: "Daily meditation goal shared with a buddy",
   },
   {
     title: "Checklist",
     body: "Write the list up front and check items off. One-time, or reset every day for a routine.",
-    src: "/screenshots/checklist_goal.png",
+    src: publicUrl("/screenshots/checklist_goal.png"),
     alt: "Morning routine checklist with daily progress",
   },
   {
     title: "Item Tracker",
     body: "Add wins as you go — books read, applications sent, places visited — and see who is ahead.",
-    src: "/screenshots/item_goal.png",
+    src: publicUrl("/screenshots/item_goal.png"),
     alt: "Book reading list compared side by side with a buddy",
   },
 ] as const;

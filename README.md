@@ -24,6 +24,12 @@ npm run build    # production assets in dist/
 npm run preview  # serve the production build locally
 ```
 
+## GitHub Pages
+
+Pushes to `main` build the site and publish it at [joserrivase.github.io/buddyup-website](https://joserrivase.github.io/buddyup-website/).
+
+`buddyupapp.co` stays on Cloudflare so invite links at `/join/{code}` keep working. Do not point that domain at GitHub Pages.
+
 ## Deploy (Cloudflare Pages)
 
 This site is a static build. On Cloudflare Pages:

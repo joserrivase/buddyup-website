@@ -1,3 +1,4 @@
+import { publicUrl } from "../data";
 import { AppStoreButton } from "./AppStoreButton";
 import { Logo } from "./Logo";
 import { PhoneMockup } from "./PhoneMockup";
@@ -37,7 +38,7 @@ export function Hero() {
 
         <div className="flex justify-center md:justify-end">
           <PhoneMockup
-            src="/screenshots/daily_goal.png"
+            src={publicUrl("/screenshots/daily_goal.png")}
             alt="Daily meditation goal with streaks, days completed, and a shared calendar"
             className="max-w-[300px]"
           />
