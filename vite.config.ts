@@ -6,6 +6,6 @@ const onGitHubActions = (globalThis as { process?: { env?: { GITHUB_ACTIONS?: st
   ?.GITHUB_ACTIONS;
 
 export default defineConfig({
-  base: onGitHubActions ? "/buddyup-website/" : "/",
+  base: onGitHubActions ? "/" : "/",
   plugins: [react(), tailwindcss()],
 });
